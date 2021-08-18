@@ -44,7 +44,7 @@ func (seg *Segmenter) Dictionary() *Dictionary {
 func (seg *Segmenter) LoadDictionary(files string) {
 	seg.dict = NewDictionary()
 	for _, file := range strings.Split(files, ",") {
-		log.Printf("载入sego词典 %s", file)
+// 		log.Printf("载入sego词典 %s", file)
 		dictFile, err := os.Open(file)
 		defer dictFile.Close()
 		if err != nil {
@@ -122,7 +122,7 @@ func (seg *Segmenter) LoadDictionary(files string) {
 		}
 	}
 
-	log.Println("sego词典载入完毕")
+// 	log.Println("sego词典载入完毕")
 }
 
 // 对文本分词
